@@ -9,6 +9,9 @@
 // that override this. The pipeline checks for a repo-level config first.
 // =============================================================================
 
+import tsParser from "@typescript-eslint/parser";
+import globals from "globals";
+
 export default [
   {
     // Apply to all JS/TS files
@@ -26,6 +29,10 @@ export default [
     languageOptions: {
       ecmaVersion: "latest",
       sourceType: "module",
+      parser: tsParser,
+      globals: {
+        ...globals.node,
+      },
     },
 
     rules: {
