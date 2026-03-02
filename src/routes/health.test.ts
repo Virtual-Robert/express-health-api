@@ -13,7 +13,7 @@ describe('GET /health', () => {
     expect(body.status).toBe('ok');
     expect(typeof body.timestamp).toBe('string');
     expect(new Date(body.timestamp).toISOString()).toBe(body.timestamp);
-    expect(typeof body.uptime).toBe('number');
+    expect(Number.isInteger(body.uptime)).toBe(true);
     expect(body.uptime).toBeGreaterThanOrEqual(0);
     expect(typeof body.memoryMB).toBe('number');
     expect(body.memoryMB).toBeGreaterThan(0);
