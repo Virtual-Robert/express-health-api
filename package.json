@@ -1,0 +1,28 @@
+{
+  "name": "express-health-api",
+  "version": "1.0.0",
+  "description": "Express API with health check endpoint",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/index.js",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.11.0",
+    "@types/supertest": "^6.0.2",
+    "@typescript-eslint/parser": "^8.56.1",
+    "eslint-formatter-compact": "^9.0.1",
+    "globals": "^17.4.0",
+    "supertest": "^7.1.3",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.0"
+  }
+}
